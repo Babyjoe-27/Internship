@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(41, 41, 231);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        form{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 7px;
+            background-color: #fff;
+            padding: 40px 25px;
+
+
+        }
+        legend{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+        }
+        legend span{
+            padding-bottom: 1px;
+            border-bottom: 3px solid rgb(41, 41, 231);
+        }
+        input{
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px outset rgb(141, 141, 141);
+            color: rgb(43, 43, 43);
+            outline: none;
+        }
+        label{
+            color: rgb(92, 92, 219);
+            font-size: 14px;
+        }
+        
+        input[type="submit"]{
+            border: none;
+            background-color: rgb(41, 41, 231);
+            transition: 2s;
+            color: #fff;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(92, 92, 219);
+        }
+        p{
+            text-align: center;
+            margin: 5px;
+        }
+        p a{
+            text-decoration: none;
+            margin-left: 2px;
+            columns: rgb(92, 92, 219);
+        }
+        p a:hover{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <legend>
+            <span>Re</span>gistration
+        </legend>
+        
+        <input type="text" name="username" placeholder="Enter Your Name">
+        <input type="email" name="Email"  placeholder="Enter Your Email">
+        <input type="password" name="password" placeholder="Create Password">
+        <input type="password" name="password"  placeholder="Confirm Password">       
+
+        <label for="terms">
+            <input type="checkbox" name="terms" id="#">
+            I accept all terms & conditions
+        </label>
+        <input type="submit" value="Register Now">
+        <p>Already have an account? <a href="#">Login Now</a></p>
+    </form>
+</body>
+</html>
