@@ -12,13 +12,27 @@
 //         alert(sum)
 
 //compering 3 numbers
-         let a = 10;
-         let b = 110;
-         let c = 5;
-    if (a>b & a>c){
-        console.log("A is the greatest")
-    }else if(b>c){
-        console.log("B is the greatest")
-    } else {
-        console.log("C is the greatest")
+    //      let a = 10;
+    //      let b = 110;
+    //      let c = 5;
+    // if (a>b & a>c){
+    //     console.log("A is the greatest")
+    // }else if(b>c){
+    //     console.log("B is the greatest")
+    // } else {
+    //     console.log("C is the greatest")
+    // }
+
+    //function in JS
+    //Regular functions
+    // function greet(name, age) {
+    //     alert("Yoo mother f**ker " + name + " You are " + age + " years old")
+    // }
+
+    // greet(" Desmond",15);
+    for( let i = 0; i < 3; i++) {
+        if(i === 1) break;
+        console.log(i);
     }
+    //function scope
+    

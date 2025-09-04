@@ -83,17 +83,48 @@
             <span>Re</span>gistration
         </legend>
         
-        <input type="text" name="username" placeholder="Enter Your Name" required>
-        <input type="email" name="Email"  placeholder="Enter Your Email" required>
-        <input type="password" name="password" placeholder="Create Password" required>
-        <input type="password" name="password"  placeholder="Confirm Password" required>       
+        <input type="text" name="name" placeholder="Enter Your Name" required id="name">
+        <input type="email" name="email"  placeholder="Enter Your Email" required id="email">
+        <input type="password" name="password" placeholder="Create Password" required id="password">
+        <input type="password" name="confirm-password"  placeholder="Confirm Password" required id="confirm-password">
 
         <label for="terms">
-            <input type="checkbox" name="terms" id="#">
+            <input type="checkbox" name="terms" id="terms" required>
             I accept all terms & conditions
         </label>
-        <input type="submit" value="Register Now">
+        <input type="submit" value="Register Now" id="submit">
         <p>Already have an account? <a href="#">Login Now</a></p>
     </form>
+
+    <script>
+        function login(id) {
+            return document.getElementById(id);
+        }
+        let name = login("name");
+        let email = login("email");
+        let password = login("password");
+        let confirmPassword = login("confirm-password");
+        let terms = login("terms");
+        let submit = login("submit");
+
+        submit.addEventListener("click", function(e){
+            e.preventDefault();
+            if (name.value == ""){
+                alert("Please enter your name");
+            } else if (email.value == ""){
+                alert("Please enter your email");
+            } else if (password.value == ""){
+                alert("Please create a password");
+            } else if (confirmPassword.value == ""){
+                alert("Please confirm your password");
+            } else if (password.value != confirmPassword.value){
+                alert("Password do not match");
+            } else if (!terms.checked){
+                alert("Please accept terms and conditions");
+            } else {
+                alert("Registration successful");
+            }
+        });
+    </script>
 </body>
 </html>

@@ -58,19 +58,39 @@
     <form >
         <h2>Welcome</h2>
         <label for="username">Username:</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="name">
         <label for="password">Password:</label>
         <input type="text" name="password" id="password">
         
-        <input class="btn" type="submit" value="Login">
-        <input class="btn" type="submit" value="Signup">
+        <input class="btn" type="submit" value="Login" id="login">
+        <input class="btn" type="submit" value="Signup" id="Signup">
         <!--<button>Login</button>
         <button>Signup</button> -->
     </form>
 
     <script>
         //this is our first test
-        console.log("Hello World");
+        //console.log("Hello World");
+
+        function submit(id) {
+            return document.getElementById(id)
+        }
+        let name = submit("name");
+        let password = submit("password");
+        let login = submit("login");
+        let Signup = submit("signup");
+
+        Submit.addEventListener("click", function(e){
+            e.preventDefault();
+            if (name.value == ""){
+                alert("Please Enter ur name");
+            }else if (password.value == ""){
+                alert("pls Enter ur password");
+            }else{
+                alert("login Successful");
+            }
+
+        }) 
     </script>
 </body>
 </html>
